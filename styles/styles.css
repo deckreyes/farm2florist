@@ -10,24 +10,25 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
+ :root {
   /* colors */
-  --link-color: #035fe6;
+  --link-color: #000435;
   --link-hover-color: #136ff6;
   --background-color: white;
   --light-color: #eee;
   --dark-color: #ccc;
-  --text-color: black;
+  --text-color: #000435;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
+  --body-font-family: montserrat;
+  --heading-font-family: hedvig-letters-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
   --body-font-size-m: 22px;
   --body-font-size-s: 18px;
   --body-font-size-xs: 16px;
+  --body-font-size-xxs: 11px;
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
@@ -36,9 +37,11 @@
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
+  --heading-font-size-xxs: 14px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 151px;
+  --nav-section-height: 50px;
 }
 
 @font-face {
@@ -60,13 +63,13 @@
 }
 
 body {
-  font-size: var(--body-font-size-m);
   margin: 0;
   font-family: var(--body-font-family);
-  line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
   display: none;
+  font-size: var(--heading-font-size-xxs);
+  line-height: 1.2rem;
 }
 
 body.appear {
@@ -138,7 +141,6 @@ a.button:any-link, button {
   box-sizing: border-box;
   text-decoration: none;
   border: 2px solid transparent;
-  padding: 5px 30px;
   text-align: center;
   font-style: normal;
   font-weight: 600;
@@ -149,7 +151,10 @@ a.button:any-link, button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: var(--body-font-size-xxs);
+  padding: 0.4rem 2.2rem;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
@@ -187,12 +192,12 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  padding: 32px 16px;
 }
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 32px 32px;
   }
 }
 
@@ -207,4 +212,34 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+
+/* cta-outline "block" */
+.cta-outline .default-content-wrapper {
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+
+.cta-outline .default-content-wrapper h2 {
+  margin: 0;  
+  font-weight: 200;
+  font-size: var(--heading-font-size-s);
+}
+
+.cta-outline .default-content-wrapper p:first-of-type {
+  line-height: 1.1rem;
+  width: 45%;
+  max-width: 540px;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.cta-outline .default-content-wrapper p.button-container,
+.cta-outline .default-content-wrapper p.button-container a {
+  margin: 0;
 }
