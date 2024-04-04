@@ -81,7 +81,7 @@ header {
 }
 
 h1, h2, h3,
-h4, h5, h6 {
+h5, h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
@@ -90,10 +90,21 @@ h4, h5, h6 {
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
+h4 {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: var(--body-font-size-xs);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 h1 { font-size: var(--heading-font-size-xxl) }
 h2 { font-size: var(--heading-font-size-xl) }
 h3 { font-size: var(--heading-font-size-l) }
-h4 { font-size: var(--heading-font-size-m) }
+/*h4 { font-size: var(--heading-font-size-m) }*/
 h5 { font-size: var(--heading-font-size-s) }
 h6 { font-size: var(--heading-font-size-xs) }
 

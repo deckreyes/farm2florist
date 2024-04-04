@@ -1,7 +1,13 @@
 footer {
   padding: 2rem;
-  background-color: var(--light-color);
+  /*background-color: var(--light-color);*/
+  background-color: #10091a;
   font-size: var(--body-font-size-s);
+  text-align: center;
+}
+
+footer a:any-link{
+  color: white;
 }
 
 footer .footer {
@@ -9,6 +15,21 @@ footer .footer {
   margin: auto;
 }
 
+footer .copyright {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 footer .footer p {
   margin: 0;
+}
+
+footer .footermenu {
+    padding: 20px; 
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
